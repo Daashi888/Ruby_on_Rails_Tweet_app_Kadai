@@ -16,10 +16,6 @@ class PostsController < ApplicationController
     end
   end
 
-  def show #詳細画面
-
-  end
-
   def edit
     @post = Post.find(params[:id])
   end
