@@ -1,0 +1,17 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: goodbye_bird_app_development
+test:
+  <<: *default
+  database: goodbye_bird_app_test
+
+production:
+  <<: *default
+  database: goodbye_bird_app_production
+  username: goodbye_bird_app
+  password: <%= ENV['GOODBYE_BIRD_APP_DATABASE_PASSWORD'] %>
