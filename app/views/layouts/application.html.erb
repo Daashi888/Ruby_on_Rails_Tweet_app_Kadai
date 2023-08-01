@@ -8,9 +8,18 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
   <body>
+  <header>
+    <p>Goodbye Bird App</p>
+  </header>
     <%= yield %>
+
+  <footer>
+	  <p>Copyright &copy; 2023 Dpro.</p>
+  </footer>
+
   </body>
 </html>
